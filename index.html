@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clover</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+<aside class="sidebar">
+
+
+<div class="logo-area">
+
+<img src="images/logo.png" class="logo">
+
+</div>
+
+
+
+<div class="profile-mini">
+
+<img src="images/user.png" class="user-icon">
+
+<p id="userName">
+Cloverユーザー
+</p>
+
+</div>
+
+
+
+
+<nav>
+
+<button onclick="showPage('home')">
+ホーム
+</button>
+
+
+<button onclick="showPage('study')">
+学習記録
+</button>
+
+
+<button onclick="showPage('videos')">
+動画共有
+</button>
+
+
+<button onclick="showPage('friends')">
+友達
+</button>
+
+
+<button onclick="showPage('chat')">
+Cloverth
+</button>
+
+
+<button onclick="showPage('profile')">
+プロフィール
+</button>
+
+
+</nav>
+
+
+</aside>
+
+
+
+
+
+<main class="main">
+
+
+<section id="home" class="page active">
+
+
+<div class="hero">
+
+
+<img src="images/character_home.png"
+class="character">
+
+
+<h1>
+Clover
+</h1>
+
+
+<p>
+成長を記録する場所
+</p>
+
+
+<div class="status">
+
+
+<div>
+レベル
+<br>
+<span id="level">
+1
+</span>
+</div>
+
+
+<div>
+学習時間
+<br>
+<span id="studyTime">
+0
+</span>
+分
+</div>
+
+
+<div>
+投稿数
+<br>
+<span id="videoCount">
+0
+</span>
+件
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+<section id="study" class="page">
+
+<div class="panel">
+
+<h2>
+学習記録
+</h2>
+
+
+<input id="studyName" placeholder="勉強内容">
+
+<input id="studyMinutes" placeholder="時間（分）">
+
+
+<button onclick="saveStudy()">
+記録する
+</button>
+
+
+<div id="studyList"></div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<section id="videos" class="page">
+
+<div class="panel">
+
+<h2>
+動画共有
+</h2>
+
+
+<input id="videoTitle" placeholder="動画タイトル">
+
+
+<textarea id="videoDescription"
+placeholder="説明"></textarea>
+
+
+<button onclick="postVideo()">
+投稿する
+</button>
+
+
+<div id="videoList"></div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<section id="friends" class="page">
+
+<div class="panel">
+
+
+<h2>
+友達
+</h2>
+
+
+<input id="friendEmail"
+placeholder="Gmailアドレス">
+
+
+<button onclick="requestFriend()">
+友達申請
+</button>
+
+
+<div id="friendList"></div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<section id="chat" class="page">
+
+<div class="panel">
+
+
+<h2>
+Cloverth
+</h2>
+
+
+<div id="chatMessages"></div>
+
+
+<input id="chatInput"
+placeholder="メッセージ">
+
+
+<button onclick="sendMessage()">
+送信
+</button>
+
+
+</div>
+
+</section><section id="profile" class="page">
+
+<div class="panel">
+
+<img src="images/user.png" class="profile-image">
+
+
+<h2>
+プロフィール編集
+</h2>
+
+
+<input id="nameInput" placeholder="名前">
+
+
+<textarea id="introInput"
+placeholder="自己紹介"></textarea>
+
+
+<button onclick="saveProfile()">
+保存
+</button>
+
+
+</div>
+
+</section>
+
+
+
+</main>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
